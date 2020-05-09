@@ -1,8 +1,0 @@
-.Python
-*.crt
-.cache
-vendor
-*~
-*.pyc
-*.idea
-.vscode
