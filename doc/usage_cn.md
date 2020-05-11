@@ -29,4 +29,4 @@ TODO
 ```
 
 ## 快速开始
-- [快速开始](./doc/tutorial_cn.md)
+- [快速开始](./tutorial_cn.md)
