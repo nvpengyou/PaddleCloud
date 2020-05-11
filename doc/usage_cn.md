@@ -30,3 +30,19 @@ TODO
 
 ## 快速开始
 - [快速开始](./tutorial_cn.md)
+
+## 如何使用
+
+## 功能介绍
+
+### 预置的环境变量
+
+## FAQ
+
+
+**Q：** Python版本问题
+
+
+**A：** 命令行工具（paddlecloud命令行）和组网代码（paddle代码）仅支持python3，不支持python2
+
+
