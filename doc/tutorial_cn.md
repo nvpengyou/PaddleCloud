@@ -6,18 +6,14 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 ## 准备命令行工具环境
 
 - 安装python3环境和依赖库
-
-
-'''
+'''shell
 yum install python3
 pip3 install requests
 pip3 install rsa
 '''
 
 - 下载命令行工具
-
-
-'''
+'''shell
 TODO
 '''
 
