@@ -5,7 +5,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 - [快速开始](./doc/tutorial_cn.md)
 - [使用手册](./doc/usage_cn.md)
-
+- [示例](./example)
 
 ## How To
 - **免费使用**
