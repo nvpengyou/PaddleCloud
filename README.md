@@ -54,7 +54,11 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 ## 联系我们
 
 - 飞桨官方技术交流群(QQ群号:703252161)
+
+
 ![QQ群](https://paddlepaddle-org-cn.cdn.bcebos.com/paddle-site-front/static/media/qqqr.5897e5621632b863f1a4363499954f90.png)
 
 - 飞桨微信公众号
+
+
 ![微信公众号](https://paddlepaddle-org-cn.cdn.bcebos.com/paddle-site-front/static/media/paddlepaddleQr.7da963abe002e36f858f31d824a2d7a4.jpg)
