@@ -18,11 +18,15 @@ pip3 install rsa
 
 PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
 
--- linux & mac
+**linux & mac**
 ```shell
 TODO
 ```
 
--- Windows
+**Windows**
+```shell
+TODO
+```
 
 ## 快速开始
+- [快速开始](./doc/tutorial_cn.md)
