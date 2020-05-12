@@ -29,8 +29,8 @@ import paddle.fluid as fluid
 
 
 LOCAL_DATA_PATH = os.getenv("LOCAL_MOUNT_PATH")
-cluster_train_dir = LOCAL_DATA_PATH + "/train_data"
-cluster_test_dir = LOCAL_DATA_PATH + "/test_data"
+cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data"
+cluster_test_dir = LOCAL_DATA_PATH + "/data/test_data"
 
 
 def cluster_data_reader(file_dir):
