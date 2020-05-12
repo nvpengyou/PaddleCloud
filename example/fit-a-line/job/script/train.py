@@ -227,7 +227,7 @@ def main():
         for idx, val in enumerate(infer_label):
             print("%d: %.2f" % (idx, val))
 
-        save_result(results[0], infer_label)
+        #save_result(results[0], infer_label)
 
 
 if __name__ == '__main__':
