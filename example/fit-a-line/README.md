@@ -34,14 +34,14 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
 - 安装paddlecloud命令行工具
 
 
-安装python3环境和依赖库
+   - 安装python3环境和依赖库
 ```shell
 yum install python3
 pip3 install requests
 pip3 install rsa
 ```
 
-下载并安装命令行工具（PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式）
+   - 下载并安装命令行工具（PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式）
 
 
 ```shell
