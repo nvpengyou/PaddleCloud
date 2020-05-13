@@ -4,6 +4,7 @@
 ## 代码结构
 
 示例代码目录结构
+```
 .
 ├── job: 示例任务父目录，用paddlecloud命令行提交任务时配置--file=./job,可将任务的提交到集群上
 │   ├── data
@@ -13,6 +14,7 @@
 │   │   ├── run.sh: 训练任务的启动脚本，主要用来调起任务的python脚本，例如：python train.py，该脚本是在计算集群上被调用
 │   │   ├── train.py: 具体的算法代码，此处的是房价预测的paddle组网代码
 ├── submit.sh: 提交任务的脚本，需要在自己的机器上执行，并且需要先下载并安装paddlecloud命令行工具，该脚本仅支持linux和mac上使用
+```
 
 其中
 train_data和test_data在计算节点上获取该路径的方法
