@@ -48,7 +48,14 @@ pip3 install rsa
 TODO
 ```
 - 配置命令行工具
-todo
+   - 填入企业或组织邮箱，申请token，等待邮件通知
+  
+  
+     TODO
+   - 将邮件中的token填入客户端配置文件
+   
+   
+     TODO
 
 - 提交任务
 ```shell
