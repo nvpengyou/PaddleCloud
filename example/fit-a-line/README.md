@@ -67,7 +67,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
   ```shell
   sh submit.sh
   ```
-  也可以将submit.sh中的内容那出来在当前目录单独执行，例如：
+  也可以将submit.sh中的内容拿出来单独执行，例如：
   ```shell
   paddlecloud submit_job --files=job --start_cmd="sh run.sh"
   // --files用来指定本地代码和数据的目录，本地的job目录会被整体上传到计算集群中
