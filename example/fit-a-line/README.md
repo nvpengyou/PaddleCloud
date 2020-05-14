@@ -63,6 +63,13 @@ TODO
      TODO
 
 - 提交任务
+在当前目录下
 ```shell
 sh submit.sh
+```
+也可以将submit.sh中的内容那出来在当前目录单独执行，例如：
+```shell
+paddlecloud submit_job --files=job --start_cmd="sh run.sh"
+// --files用来指定本地代码和数据的目录，本地的job目录会被整体上传到计算集群中
+// --start_cmd指定任务的启动命令，该命令会在计算集群上被执行，注意：需要确保代码在script目录下
 ```
