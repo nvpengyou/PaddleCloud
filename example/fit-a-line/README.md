@@ -40,18 +40,18 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
 
 
    - 安装python3环境和依赖库
-```shell
-yum install python3
-pip3 install requests
-pip3 install rsa
-```
+     ```shell
+     yum install python3
+     pip3 install requests
+     pip3 install rsa
+     ```
 
    - 下载并安装命令行工具（PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式）
 
 
-```shell
-TODO
-```
+     ```shell
+     TODO
+     ```
 - 配置命令行工具
    - 填入企业或组织邮箱，申请token，等待邮件通知
   
@@ -63,13 +63,13 @@ TODO
      TODO
 
 - 提交任务
-在当前目录下
-```shell
-sh submit.sh
-```
-也可以将submit.sh中的内容那出来在当前目录单独执行，例如：
-```shell
-paddlecloud submit_job --files=job --start_cmd="sh run.sh"
-// --files用来指定本地代码和数据的目录，本地的job目录会被整体上传到计算集群中
-// --start_cmd指定任务的启动命令，该命令会在计算集群上被执行，注意：需要确保代码在script目录下
-```
+
+  ```shell
+  sh submit.sh
+  ```
+  也可以将submit.sh中的内容那出来在当前目录单独执行，例如：
+  ```shell
+  paddlecloud submit_job --files=job --start_cmd="sh run.sh"
+  // --files用来指定本地代码和数据的目录，本地的job目录会被整体上传到计算集群中
+  // --start_cmd指定任务的启动命令，该命令会在计算集群上被执行，注意：需要确保代码在script目录下
+  ```
