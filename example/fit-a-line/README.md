@@ -52,7 +52,8 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
      ```shell
      TODO
      ```
-### 2、配置命令行工具
+### 2、申请&配置token
+- 免费使用
    - 填入企业或组织邮箱，申请token，等待邮件通知
   
   
@@ -61,6 +62,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
    
    
      TODO
+- 付费使用
 
 ### 3、提交任务
 
