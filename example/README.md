@@ -9,4 +9,4 @@ PaddleCloud提供了如下PaddlePaddle任务的示例用法，可参考示例用
 - [PLSC](./plsc)
 
 ## 语义理解预训练
-- [ernie](./ernie)
+- [ERNIE](./ernie)
