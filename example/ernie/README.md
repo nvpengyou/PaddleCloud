@@ -2,7 +2,7 @@
 [ERNIE](https://github.com/PaddlePaddle/ERNIE/blob/develop/README.zh.md)是基于持续学习的语义理解预训练框架
 
 
-使用该示例前，请先将PaddleCloud的代码整体下载到本地
+使用该示例前，请先将该代码整体下载到本地
 
 
 ## 代码结构
