@@ -91,22 +91,31 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 
   1）百度云实名认证并开通BCC权限，在账号中提前充入部分资金
-  TODO 截图
+    按照百度云BCC文档完成 [BCC注册及实名认证](https://cloud.baidu.com/doc/BCC/s/3k4torn21#%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81)
+    - [注册](https://cloud.baidu.com/doc/UserGuide/s/ejwvy3fo2#%E6%B3%A8%E5%86%8C%E7%99%BE%E5%BA%A6%E8%B4%A6%E5%8F%B7)
+    - [实名认证](https://cloud.baidu.com/doc/UserGuide/s/8jwvy3c96)
+     
+     注：仅需完成注册及实名认证即可，无需手动购买BCC，提交GPU训练任务时，PaddleCloud会自动帮您购买BCC GPU/CPU计算资源，并按照BCC的收费标准进行计费，PaddleCloud本身不产生额外费用
 
-  2）下载PaddleCloud命令行工具（目前仅支持命令行工具）
-  ```shell
-  TODO
-  ```
 
-  3）填入百度云账号ak/sk
-  ```shell
-  TODO
-  ```
+  2）配置百度云账号ak/sk
+     - 先按照文档 [获取百度云AK/SK](https://cloud.baidu.com/doc/Reference/s/9jwvz2egb)（如果已拿到百度云AK/SK，可以跳过此步骤；此处的百度云AK/SK区别于免费的token）
+     - 将百度云AK/SK填入命令行工具的配置文件
+      打开安装目录在~/bin/paddlecloud/client.conf文件，将百度云AK/SK信息填入到该文件中
+      ```shell
+      [bcc]
+      ak: // 私人的百度云虚拟化计算资源Access Key
+      sk: // 私人的百度云虚拟化计算资源Secret Key
+ 
+      [bos]:
+      ak: // 私人的百度云虚拟化存储资源Access Key
+      sk: // 私人的百度云虚拟化存储资源Secret Key
+      ```
+      此处的两套AK/SK可以保持一致
 
-  4）开始提交训练任务
-  ```shell
-  TODO
-  ```
+
+  [百度云BCC计费说明](https://cloud.baidu.com/doc/BCC/s/Ajy6x35ik)，PaddleCloud自动性价比较好的套餐
+
 
 ## 快速开始
 - [快速开始](./tutorial_cn.md)
