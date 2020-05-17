@@ -134,18 +134,46 @@ TODO
 TODO
 
 ### 创建任务
+- 功能描述
+TODO 
+
+- 参数说明
+TODO
+
+- 用法示例
 TODO
 
 ### 查询任务
+- 功能描述
+TODO 
+
+- 参数说明
+TODO
+
+- 用法示例
 TODO
 
 ### 结束任务
+- 功能描述
+TODO 
+
+- 参数说明
+TODO
+
+- 用法示例
 TODO
 
 ### 查看结果
 TODO
 
 ## 参数说明
+- 功能描述
+TODO 
+
+- 参数说明
+TODO
+
+- 用法示例
 TODO
 
 ## FAQ
