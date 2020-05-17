@@ -53,33 +53,25 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
   paddlecloud.bat
   ```
 
-## 快速开始
-- [快速开始](./tutorial_cn.md)
 
-## 如何使用
+## 申请&配置token
 
 - **免费使用**
 
 
-提供少量免费GPU计算资源供试用 
+  提供少量免费GPU计算资源供试用 
 
 
-   使用步骤：
+   操作步骤：
  
  
-   1）下载PaddleCloud命令行工具（目前仅支持命令行工具）
-   ```shell
-   TODO
-   ```
- 
- 
-   2）填入企业或组织邮箱，申请token，等待邮件通知
+   1）填入企业或组织邮箱，申请token，等待邮件通知
    ```shell
    paddlecloud gen_token --email=${your email}
    例如：paddlecloud gen_token --email=张三@163.com
    ```
  
-   3）将邮件中的token填入客户端配置文件
+   2）将邮件中的token填入客户端配置文件
    登陆自己的邮箱，查收Baidu PaddleCloud邮件，将如下内容全部复制并粘贴到~/bin/paddlecloud/conf/token.conf文件中（先找到该文件并用编辑器打开后在粘贴）
    ```shell
    // 注：如下内容仅为示例，以自己收到的邮件中的内容为准
@@ -88,19 +80,14 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
    ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    ```
- 
-   4）开始提交训练任务
-   ```shell
-   TODO
-   ```
 
 - **付费使用**
 
 
-支持使用百度云付费GPU（付费BCC GPU虚拟机）按需跑训练任务，仅在任务运行过程中收取BCC GPU虚拟机费用，任务运行完自动结束计费 
+  支持使用百度云付费GPU（付费BCC GPU虚拟机）按需跑训练任务，仅在任务运行过程中收取BCC GPU虚拟机费用，任务运行完自动结束计费 
 
 
-  使用步骤：
+  操作步骤：
 
 
   1）百度云实名认证并开通BCC权限，在账号中提前充入部分资金
@@ -120,6 +107,9 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
   ```shell
   TODO
   ```
+
+## 快速开始
+- [快速开始](./tutorial_cn.md)
 
 ## 功能介绍
 
