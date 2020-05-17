@@ -4,3 +4,9 @@ PaddleCloud提供了如下PaddlePaddle任务的示例用法，可参考示例用
 
 ## 房价预测示例
 - [fit-a-line](./fit-a-line)
+
+## 大规模分类
+- [PLSC](./plsc)
+
+## 语义理解预训练
+- [ernie](./ernie)
