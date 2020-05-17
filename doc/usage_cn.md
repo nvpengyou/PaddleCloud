@@ -33,7 +33,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 - 下载命令行工具
 
-TODO 下载地址待补充
+
 PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
 
 **linux & mac**
@@ -42,6 +42,8 @@ TODO
 ```
 
 **Windows**
+
+TODO 下载地址待补充
 
 
 解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，
