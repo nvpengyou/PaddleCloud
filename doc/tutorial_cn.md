@@ -92,3 +92,5 @@ paddlecloud get_files --job_id=job-b4b917843790cc7964ca49d776457004 --download=1
 
 ### 按示例使用
 - [房价预测示例](../example/fit-a-line)
+- [大规模分类](../example/plsc)
+- [语义理解预训练](../example/ernie)
