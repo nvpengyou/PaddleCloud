@@ -73,6 +73,10 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
      sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      ```
 - 付费使用
+   - 百度云实名认证并开通BCC权限，在账号中提前充入部分资金
+
+
+   - 配置百度云账号ak/sk
 
 ### 3、提交任务
 
