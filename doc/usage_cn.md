@@ -22,11 +22,14 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 ## 准备环境
 - 安装python3环境和依赖库
-```shell
-yum install python3
-pip3 install requests
-pip3 install rsa
-```
+  1）自行安装Python3和pip3（Python3包安装和管理工具）
+   
+
+  2）安装Python依赖库
+  ```shell
+  pip3 install requests
+  pip3 install rsa
+  ```
 
 - 下载命令行工具
 
