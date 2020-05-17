@@ -22,6 +22,8 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 ## 准备环境
 - 安装python3环境和依赖库
+
+
   1）自行安装Python3和pip3（Python3包安装和管理工具）
    
 
@@ -34,22 +36,22 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 - 下载命令行工具
 
 
-PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
+  PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
 
-**linux & mac**
-```shell
-TODO
-```
+  **linux & mac**
+  ```shell
+  TODO
+  ```
 
-**Windows**
+  **Windows**
 
-TODO 下载地址待补充
+  TODO 下载地址待补充
 
 
-解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，
-```shell
-paddlecloud.bat
-```
+  解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，
+  ```shell
+  paddlecloud.bat
+  ```
 
 ## 快速开始
 - [快速开始](./tutorial_cn.md)
