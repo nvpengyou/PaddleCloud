@@ -53,7 +53,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
      TODO
      ```
 ### 2、申请&配置token
-- 免费使用
+- **免费使用**
    - 填入企业或组织邮箱，申请token，等待邮件通知
   
      ```
@@ -72,7 +72,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
      ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      ```
-- 付费使用
+- **付费使用**
 
 [百度云BCC计费说明](https://cloud.baidu.com/doc/BCC/s/Ajy6x35ik)，PaddleCloud自动性价比较好的套餐
    - 百度云实名认证并开通BCC权限，在账号中提前充入部分资金
