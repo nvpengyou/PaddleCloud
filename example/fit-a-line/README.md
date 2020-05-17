@@ -66,7 +66,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
    
      登陆自己的邮箱，查收Baidu PaddleCloud邮件，将如下内容全部复制并粘贴到~/bin/paddlecloud/conf/token.conf文件中
      ```shell
-     // 如下仅为示例，以自己收到的邮件中的内容为准
+     // 注：如下内容仅为示例，以自己收到的邮件中的内容为准
      [token]
      userid: xxx
      ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
