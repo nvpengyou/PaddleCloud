@@ -19,10 +19,10 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 - 下载命令行工具
 
 
-```shell
-TODO
-```
-PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
+   ```shell
+   TODO
+   ```
+   PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
 
 
 ## 开始使用
