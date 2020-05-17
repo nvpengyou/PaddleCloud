@@ -75,12 +75,18 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
  
    2）填入企业或组织邮箱，申请token，等待邮件通知
    ```shell
-   TODO
+   paddlecloud gen_token --email=${your email}
+   例如：paddlecloud gen_token --email=张三@163.com
    ```
  
    3）将邮件中的token填入客户端配置文件
+   登陆自己的邮箱，查收Baidu PaddleCloud邮件，将如下内容全部复制并粘贴到~/bin/paddlecloud/conf/token.conf文件中（先找到该文件并用编辑器打开后在粘贴）
    ```shell
-   TODO
+   // 注：如下内容仅为示例，以自己收到的邮件中的内容为准
+   [token]
+   userid: xxx
+   ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    ```
  
    4）开始提交训练任务
