@@ -78,6 +78,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
 
   直接执行如下命令即可将任务提交到计算集群上运行
   ```shell
+  // linux中使用该命令
   sh submit.sh
   ```
   也可以将submit.sh中的内容拿出来单独执行，例如：
