@@ -49,7 +49,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
      ```
 - **付费使用**
 
-   [百度云BCC计费说明](https://cloud.baidu.com/doc/BCC/s/Ajy6x35ik)，PaddleCloud自动性价比较好的套餐
+   
    - 百度云实名认证并开通BCC权限，在账号中提前充入部分资金
 
      按照百度云BCC文档完成 [BCC注册及实名认证](https://cloud.baidu.com/doc/BCC/s/3k4torn21#%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81)
@@ -72,6 +72,10 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
       sk: // 私人的百度云虚拟化存储资源Secret Key
       ```
       此处的两套AK/SK可以保持一致
+
+
+   [百度云BCC计费说明](https://cloud.baidu.com/doc/BCC/s/Ajy6x35ik)，PaddleCloud自动性价比较好的套餐
+   
   
 ### 一键开始GPU训练
 - 提交训练任务
