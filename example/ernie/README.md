@@ -7,8 +7,11 @@
 
 ## 代码结构
 
-该示例的数据和代码文件较大，并没有直接将数据和代码放入本示例目录中，请先将其[下载ernie.zip](https://ppoc-filecenter.cdn.bcebos.com/ernie.zip)到本地，然后代码下面的代码结构说明来组织和提交任务
-
+该示例的数据和代码文件较大，并没有直接将数据和代码放入本示例目录中，您可以[点击这里](https://ppoc-filecenter.cdn.bcebos.com/ernie.zip)或者使用以下命令获取示例数据和代码
+```shell
+wget https://ppoc-filecenter.cdn.bcebos.com/ernie.zip
+unzip -q ernie.zip
+```
 
 ernie.zip文件解压后结构如下：
 ```

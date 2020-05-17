@@ -163,8 +163,3 @@ drwxrwxr-x 3 work work 4096 May 17 19:08 ../
 ```json
 $ cat output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log
 ```
-
-### 7. 查看作业日志
-```json
-cat output/job-0650470e621f3688812ceda2079805f8/log/
-```
