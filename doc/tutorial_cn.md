@@ -76,8 +76,19 @@ PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
   
 ### 一键开始GPU训练
 - 提交训练任务
-- 查看任务进度
+```
+paddlecloud submit_job --files=data/PLSC --start_cmd="sh run.sh"
+```
+
+- 查看任务详情
+```
+paddlecloud query_job --job_id=job-b4b917843790cc7964ca49d776457004
+```
+
 - 下载任务目录
+```
+paddlecloud get_files --job_id=job-b4b917843790cc7964ca49d776457004 --download=1
+```
 
 ### 按示例使用
 - [房价预测示例](../example/fit-a-line)

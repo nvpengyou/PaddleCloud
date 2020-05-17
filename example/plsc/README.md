@@ -38,10 +38,10 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
 
 ### 1、安装paddlecloud命令行工具
 
+   - 请自行安装Python3和pip3（Python3包安装和管理工具）
 
-   - 安装python3环境和依赖库
+   - 安装python3环境依赖库
      ```shell
-     yum install python3
      pip3 install requests
      pip3 install rsa
      ```
@@ -101,3 +101,70 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
   // --files用来指定本地代码和数据的目录，本地的job目录会被整体上传到计算集群中
   // --start_cmd指定任务的启动命令，该命令会在计算集群上被执行，注意：需要确保代码在script目录下
   ```
+### 4. 查看任务详情
+```json
+$ paddlecloud query_job --job_id=job-0650470e621f3688812ceda2079805f8
+
+bos_url: paddlecloud-public.bj.bcebos.com/5a87a46f65608389bb42f5fed165f3c1/plsc
+create_time: 2020-05-17 18:15:28
+error_msg:
+finish_time: 2020-05-17 18:21:11
+instance_count: 1
+instance_ids_list:
+job_id: job-0650470e621f3688812ceda2079805f8
+job_name: tmp_job
+job_status: success
+job_type: gpu
+kill_flag: 0
+public_bcc: 1
+public_bos: 1
+queue_reason:
+start_cmd: sh run.sh
+start_time: 2020-05-17 18:15:47
+wall_time: 00:30:00
+```
+### 5. 查看作业目录
+```json
+$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8
+
+output/job-0650470e621f3688812ceda2079805f8/	0	2020-05-17T10:15:39Z
+output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log	5453	2020-05-17T10:16:09Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/@LR_DECAY_COUNTER@	32	2020-05-17T10:16:09Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0	280	2020-05-17T10:16:01Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0_velocity_0	280	2020-05-17T10:16:09Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0	280	2020-05-17T10:16:01Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0_velocity_0	280	2020-05-17T10:16:09Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_1	280	2020-05-17T10:16:01Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_2	280	2020-05-17T10:16:01Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0	280	2020-05-17T10:16:01Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0_velocity_0	280	2020-05-17T10:16:09Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0	280	2020-05-17T10:16:01Z
+output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0_velocity_0	280	2020-05-17T10:16:09Z
+....
+```
+
+### 6. 查看作业日志
+
+- 下载作业日志
+```json
+$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8 --prefix=output/job-0650470e621f3688812ceda2079805f8/log --download=1
+```
+
+- 查看日志列表
+```json
+$ ll output/job-0650470e621f3688812ceda2079805f8/log/
+
+drwxrwxr-x 2 work work 4096 May 17 19:08 ./
+drwxrwxr-x 3 work work 4096 May 17 19:08 ../
+-rw-rw-r-- 1 work work 5453 May 17 19:08 trainer-0.log
+```
+
+- 查看日志
+```json
+$ cat output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log
+```
+
+### 7. 查看作业日志
+```json
+cat output/job-0650470e621f3688812ceda2079805f8/log/
+```
