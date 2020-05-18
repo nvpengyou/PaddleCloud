@@ -26,7 +26,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 
   1）自行安装Python3和pip3（Python3包安装和管理工具）
-   
+
 
   2）安装Python依赖库
   ```shell
@@ -68,8 +68,8 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
  
    1）填入企业或组织邮箱，申请token，等待邮件通知
    ```shell
-   paddlecloud gen_token --email=${your email}
-   例如：paddlecloud gen_token --email=张三@163.com
+   paddlecloud gen_token --email=<your email>
+   例如：paddlecloud gen_token --email=your_name@163.com
    ```
  
    2）将邮件中的token填入命令行工具的配置文件
@@ -138,33 +138,53 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 ### 申请token
 - 功能描述
-TODO 
+向指定邮箱发送一个标识用户身份的AK/SK，作为客户端的注册凭证
 
 - 参数说明
-TODO
+|参数名|是否必填|说明|示例
+|:---|:---|:---|:---
+|email|Y|你的邮箱地址|zhangsan@163.com
 
 - 用法示例
-TODO
+paddlecloud gen_token --email=<your_email>
 
 ### 创建任务
 - 功能描述
-TODO 
+通过指定一个本地文件夹或者一个bos路径，来发起一个Paddle任务
 
 - 参数说明
-TODO
+job_name：任务名称，选填，默认tmp_job
+cluster：指定资源池，可选default(默认)/bcc/cce。其中bcc/cce分别对应百度云的两种计算资源
+        default是指优先在cce资源池申请资源，申请不到再切换到bcc资源池申请资源
+public_bcc：是否使用私有计算资源1(是)/0(否)，选填
+        使用公共计算资源时，运行作业时长，实例数等存在限制
+        使用私有计算资源时，需注意确保在配置文件中填写bcc相关配置，并开通bcc权限
+public_bos：是否使用私有存储资源1(是)/0(否)，选填
+        使用公共存储资源时，支持指定本地目录，自动上传到服务器公共空间，但数据私密性较差
+        使用私有存储资源时，默认用户数据在bos上，需注意确保在配置文件中填写bos相关配置，并在命令行指定存储目录(bos_url)，
+job_type：任务类型, gpu(默认) / cpu，注意cluster参数为cce或default时不能指定为cpu
+instance_count：申请计算节点数目，默认1，仅当使用私有资源(public_bcc=0)时允许指定多个
+start_cmd：启动命令，例"sh run.sh"
+wall_time：最长运行时间，默认00:30:00，仅当使用私有资源(public_bcc=0)时生效，格式hh:mm:ss
+bos_url：用户私人的bos目录，仅当使用私有资源(public_bcc=0)时生效, 例<bucket>.bj.bcebos.com/your/dir
+files：本地脚本/数据目录，仅当使用公共资源(public_bcc=0)时生效，例./path/to/data
+
 
 - 用法示例
-TODO
+1. 使用全公共资源：paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
+2. 使用私有计算资源：paddlecloud submit_job --public_bcc=0 --files=<local_dir> --start_cmd="sh run.sh"
+3. 使用私有bos资源：paddlecloud submit_job --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
+4. 使用全私有资源：paddlecloud submit_job --public_bcc=0 --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
 
 ### 查询任务
 - 功能描述
-TODO 
+指定任务ID，查询任务的状态参数等信息 
 
 - 参数说明
-TODO
+T
 
 - 用法示例
-TODO
+paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
 
 ### 结束任务
 - 功能描述
@@ -172,6 +192,7 @@ TODO
 
 - 参数说明
 TODO
+
 
 - 用法示例
 TODO
