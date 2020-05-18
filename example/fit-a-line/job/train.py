@@ -27,15 +27,19 @@ import numpy as np
 import paddle
 import paddle.fluid as fluid
 
+# 配置训练和测试数据在计算集群上的路径
 
+# 数据在计算集群上的全路径，如果在本地运行该代码，请设置export LOCAL_MOUNT_PATH=local/to/path，并将其指向本地的数据路径
 LOCAL_DATA_PATH = os.getenv("LOCAL_MOUNT_PATH")
+# 训练数据在计算集群上的全路径
 cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data"
+# 测试数据在计算集群上的路径
 cluster_test_dir = LOCAL_DATA_PATH + "/data/test_data"
 
 
 def cluster_data_reader(file_dir):
     """
-    cluster data reader
+    从cluster_train_dir或者cluster_test_dir路径读取数据
     """
 
     def data_reader():
