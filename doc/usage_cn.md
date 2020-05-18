@@ -224,6 +224,7 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 
 
 **A: ** 在python代码中使用环境变量示例
+
 ```python
 os.getenv("PADDLE_PORT", "0") == "1"
 ```
