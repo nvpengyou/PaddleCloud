@@ -37,7 +37,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
    - 填入企业或组织邮箱，申请token，等待邮件通知
   
      ```
-     paddlecloud gen_token --email=${your email}
+     paddlecloud gen_token --email=<your email>
      例如：paddlecloud gen_token --email=张三@163.com
      ```
      
