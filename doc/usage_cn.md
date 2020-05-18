@@ -146,7 +146,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 - 参数说明
   |参数名|说明|是否必填｜默认值|
   |:---|:---|:---|:---|:---|
-  |email|你的邮箱地址，例zhangsan@163.com|Y|-|
+  |email|你的邮箱地址，例zhangsan@163.com|Y|-|-|
 
 - 用法示例
 paddlecloud gen_token --email=<your_email>
