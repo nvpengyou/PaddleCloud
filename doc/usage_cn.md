@@ -71,15 +71,27 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
    例如：paddlecloud gen_token --email=张三@163.com
    ```
  
-   2）将邮件中的token填入客户端配置文件
-   登陆自己的邮箱，查收Baidu PaddleCloud邮件，将如下内容全部复制并粘贴到~/bin/paddlecloud/conf/token.conf文件中（先找到该文件并用编辑器打开后在粘贴）
-   ```shell
-   // 注：如下内容仅为示例，以自己收到的邮件中的内容为准
-   [token]
-   userid: xxx
-   ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   ```
+   2）将邮件中的token填入命令行工具的配置文件
+   
+   
+     登陆自己的邮箱，查收Baidu PaddleCloud邮件，将token对应的ak/sk依次填入命令行中
+     ```
+     paddlecloud gen_token --email=xxxx@baidu.com
+     create_token...
+     Paste your ak here:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     Paste your sk here:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     create_token done
+     ```
+     
+     也可以将token对应的ak/sk复制并粘贴到~/bin/paddlecloud/conf/client.conf文件中（先找到该文件并用编辑器打开后在粘贴）
+     ```shell
+     // 注：如下内容仅为示例，以自己收到的邮件中的内容为准
+     [main]
+     debug = 0
+     userid: xxx
+     ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     ```
 
 - **付费使用**
 
