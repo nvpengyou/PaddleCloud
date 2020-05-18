@@ -172,7 +172,7 @@ paddlecloud gen_token --email=<your_email>
 - 参数说明
 
 
-|参数名|说明|是否必填｜默认值|
+|参数名|说明|是否必填|默认值|
 |:---|:---|:---|:---|
 |job_name|任务名称|N|tmp_job|
 |start_cmd|启动命令，例"sh run.sh"|Y|1|
