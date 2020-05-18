@@ -64,7 +64,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
    - 将邮件中的token填入客户端配置文件
    
    
-     登陆自己的邮箱，查收Baidu PaddleCloud邮件，将token对应的ak/sk一次填入命令行中
+     登陆自己的邮箱，查收Baidu PaddleCloud邮件，将token对应的ak/sk依次填入命令行中
      ```
      paddlecloud gen_token --email=xxxx@baidu.com
      create_token...
