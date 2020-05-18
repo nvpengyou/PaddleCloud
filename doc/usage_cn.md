@@ -307,7 +307,7 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 
 client.conf的内容格式如下：
 ```shell
-// 免费使用是需要配置该部分的内容
+// 免费使用时需要配置该部分的内容
 // 请先执行paddlecloud gen_token --email=xxxx@baidu.com，将收到的邮件内容填入下面对应的部分即可
 // user_id：用户id，是用户的唯一身份表示
 // ak：Access Key
@@ -322,11 +322,14 @@ sk = xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 host = paddlecloud.baidu.com
 port = 80
 
+// 付费使用时需要配置该部分的内容
+// 请先在百度云实名认证并开通BCC权限，从百度云控制台获取ak/sk（详细请参见前面《申请&配置token》的收费使用的说明）
 [bcc]
 host = bcc.bj.baidubce.com
 ak =
 sk =
 
+// 配置自己的百度云bos信息，一般情况下该ak/sk跟上面BCC的ak/sk保持一致
 [bos]
 host = bj.bcebos.com
 ak =
