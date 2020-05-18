@@ -114,7 +114,11 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
   2）配置百度云账号ak/sk
      - 先按照文档 [获取百度云AK/SK](https://cloud.baidu.com/doc/Reference/s/9jwvz2egb)（如果已拿到百度云AK/SK，可以跳过此步骤；此处的百度云AK/SK区别于免费的token）
      - 将百度云AK/SK填入命令行工具的配置文件
+     
+     
       打开安装目录在~/bin/paddlecloud/client.conf文件，将百度云AK/SK信息填入到该文件中
+      
+      
       ```shell
       [bcc]
       ak: // 私人的百度云虚拟化计算资源Access Key
@@ -190,6 +194,8 @@ paddlecloud query_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 强制杀死一个正在运行的任务
 
 - 参数说明
+
+
 |参数名|说明|是否必填｜默认值|
 |:---|:---|:---|:---|
 |job_id|任务ID|Y|-|
@@ -202,6 +208,8 @@ paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 查看或下载任务结果
 
 - 参数说明
+
+
 |参数名|说明|是否必填｜默认值|
 |:---|:---|:---|:---|
 |job_id|任务ID|Y|-|
