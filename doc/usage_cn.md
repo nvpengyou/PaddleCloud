@@ -210,6 +210,8 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 |LOCAL_MOUNT_PATH|BOS目录在本地的挂载路径|
 |JOB_ID|当前作业在PaddleCloud的唯一标识，如job-26a2ad465894160568143eb6100deefa|
 
+## 配置文件说明
+
 
 ## FAQ
 
