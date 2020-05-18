@@ -30,9 +30,8 @@ script/
 │   ├── [CoLA.zip] 训练和测试数据集文件
 │   ├── [ERNIE_Base_en_stable-2.0.0.tar.gz] ERINE base模型文件
 │   ├── [ERNIE.tar.gz] ERINE组网代码和任务运行脚本（./en_glue/ernie_base/CoLA/task.sh）
-│   ├── [script]: 算法及训练脚本目录，提交训练任务后，该目录会被整体上传到计算集群中，注意：该目录名称不可修改
-│   │   ├── [run.sh]: 训练任务的启动脚本，主要用来调起任务的python脚本，例如：python train.py，该脚本是在计算集群上被调用
-├── submit.sh: 提交任务的脚本，该脚本会调用paddlecloud命令行工具，将训练数据data和训练代码script提交到计算集群中，需要在自己的机器上执行，并且需要先下载并安装paddlecloud命令行工具，该脚本仅支持linux和mac上使用
+│   ├── [run.sh]: 训练任务的启动脚本，主要用来调起任务的python脚本，例如：python train.py，该脚本是在计算集群上被调用
+├── submit.sh: 提交任务的脚本，该脚本会调用paddlecloud命令行工具，将训练数据data和训练代码（在ERNIE.tar.gz内部）、运行脚本run.sh提交到计算集群中，需要在自己的机器上执行，并且需要先下载并安装paddlecloud命令行工具，该脚本仅支持linux和mac上使用
 ```
 
 说明
