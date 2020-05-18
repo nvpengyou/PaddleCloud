@@ -127,3 +127,57 @@ script/
   // --files用来指定本地代码和数据的目录，本地的job目录会被整体上传到计算集群中
   // --start_cmd指定任务的启动命令，该命令会在计算集群上被执行，需要确保run.sh在script目录下
   ```
+### 4. 查看任务详情
+```json
+$ paddlecloud query_job --job_id=job-24ee302e8b411a337b9a354ab002c688
+
+bos_url: paddlecloud-public.bj.bcebos.com/7cf50eac1e7b3f3e9548290fcaab7e66/ernie
+create_time: 2020-05-18 11:33:04
+error_msg:
+finish_time: 0000-00-00 00:00:00
+instance_count: 1
+instance_ids_list:
+job_id: job-24ee302e8b411a337b9a354ab002c688
+job_name: tmp_job
+job_status: running
+job_type: gpu
+kill_flag: 0
+public_bcc: 1
+public_bos: 1
+queue_reason:
+start_cmd: sh run.sh
+start_time: 2020-05-18 11:33:18
+wall_time: 00:30:00
+```
+### 5. 查看作业目录
+```json
+$ paddlecloud get_files --job_id=job-24ee302e8b411a337b9a354ab002c688
+
+7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/	0	2020-05-18T03:33:16Z
+7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/log/job.1.3e-5.64.3.2020-05-18-11-33-34.log	33613	2020-05-18T03:37:18Z
+7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/log/job.2.3e-5.64.3.2020-05-18-11-33-34.log	33613	2020-05-18T03:40:51Z
+7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/log/job.3.3e-5.64.3.2020-05-18-11-33-34.log	33613	2020-05-18T03:44:38Z
+7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/log/job.4.3e-5.64.3.2020-05-18-11-33-34.log	22059	2020-05-18T03:47:31Z
+7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/log/trainer-0.log	126492	2020-05-18T03:47:31Z
+....
+```
+
+### 6. 查看作业日志
+
+- 下载作业日志
+```json
+$ paddlecloud get_files --job_id=job-24ee302e8b411a337b9a354ab002c688 --prefix=output --download=1
+```
+
+- 查看日志列表
+```json
+$ ll output/job-24ee302e8b411a337b9a354ab002c688/log
+
+drwxrwxr-x 3 work work 4096 May 18 11:29 ./
+drwxrwxr-x 3 work work 4096 May 18 11:29 ../
+-rw-rw-r-- 1 work work  33613 May 18 11:48 job.1.3e-5.64.3.2020-05-18-11-33-34.log
+-rw-rw-r-- 1 work work  33613 May 18 11:48 job.2.3e-5.64.3.2020-05-18-11-33-34.log
+-rw-rw-r-- 1 work work  33613 May 18 11:48 job.3.3e-5.64.3.2020-05-18-11-33-34.log
+-rw-rw-r-- 1 work work  30709 May 18 11:48 job.4.3e-5.64.3.2020-05-18-11-33-34.log
+-rw-rw-r-- 1 work work 133654 May 18 11:48 trainer-0.log
+```
