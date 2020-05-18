@@ -205,7 +205,7 @@ paddlecloud gen_token --email=<your_email>
 - 参数说明
 
 
-|参数名|说明|是否必填｜默认值|
+|参数名|说明|是否必填|默认值|
 |:---|:---|:---|:---|
 |job_id|任务ID|Y|-|
 
