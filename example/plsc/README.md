@@ -95,7 +95,18 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
      
    - 配置百度云账号AK/SK
       - 先按照文档 [获取百度云AK/SK](https://cloud.baidu.com/doc/Reference/s/9jwvz2egb)（如果已拿到百度云AK/SK，可以跳过此步骤；此处的百度云AK/SK区别于免费的token）
-      - 配置AK/SK
+      - 将百度云AK/SK填入命令行工具的配置文件
+      打开安装目录在~/bin/paddlecloud/client.conf文件，将百度云AK/SK信息填入到该文件中
+      ```shell
+      [bcc]
+      ak: // 私人的百度云虚拟化计算资源Access Key
+      sk: // 私人的百度云虚拟化计算资源Secret Key
+ 
+      [bos]:
+      ak: // 私人的百度云虚拟化存储资源Access Key
+      sk: // 私人的百度云虚拟化存储资源Secret Key
+      ```
+      此处的两套AK/SK可以保持一致
       
 
 ### 3、提交任务
