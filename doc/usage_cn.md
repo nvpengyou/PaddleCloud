@@ -11,7 +11,6 @@
    * [查询任务](#查询任务)
    * [结束任务](#结束任务)
    * [查看结果](#查看结果)
-* [参数说明](#参数说明)
 * [环境变量说明](#环境变量说明)
 * [FAQ](#FAQ)
 
@@ -156,12 +155,19 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
 
 - 用法示例
+
+
 paddlecloud gen_token --email=<your_email>
+
+
 
 ### 创建任务
 - 功能描述
+
+
 通过指定一个本地文件夹或者一个bos路径，来发起一个Paddle任务
 注意每天使用公共资源的最大时长为100分钟，同时在运行的最大任务数为2
+
 
 - 参数说明
 
@@ -178,28 +184,44 @@ paddlecloud gen_token --email=<your_email>
 |wall_time|最长运行时间，仅当使用私有资源(public_bcc=0)时可指定，格式hh:mm:ss|N|00:30:00|
 |bos_url|用户私人的bos目录，例<bucket>.bj.bcebos.com/your/dir|仅当使用私有资源(public_bcc=0)时必须|''|
 |files|本地脚本/数据目录，例./path/to/data|仅当使用公共资源(public_bcc=0)时必须|''|
+  
 
 - 用法示例
+
+
 1. 使用全公共资源：paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
 2. 使用私有计算资源：paddlecloud submit_job --public_bcc=0 --files=<local_dir> --start_cmd="sh run.sh"
 3. 使用私有bos资源：paddlecloud submit_job --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
 4. 使用全私有资源：paddlecloud submit_job --public_bcc=0 --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
+  
 
 ### 查询任务
 - 功能描述
+
+
 指定任务ID，查询任务的状态参数等信息 
 
+
 - 参数说明
+
+
 |参数名|说明|是否必填｜默认值|
 |:---|:---|:---|:---|
 |job_id|任务ID|Y|-|
 
+
 - 用法示例
+
+
 paddlecloud query_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
+
 
 ### 结束任务
 - 功能描述
+
+
 强制杀死一个正在运行的任务
+
 
 - 参数说明
 
@@ -208,12 +230,19 @@ paddlecloud query_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 |:---|:---|:---|:---|
 |job_id|任务ID|Y|-|
 
+
 - 用法示例
+
+
 paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
+
 
 ### 查看结果
 - 功能描述
+
+
 查看或下载任务结果
+
 
 - 参数说明
 
@@ -227,10 +256,10 @@ paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 
 
 - 用法示例
+
+
 paddlecloud get_fils --job_id=job-338745e5caa42a1537955e41d6f1ce33
 
-## 参数说明
-TODO
 
 ## 环境变量说明
 PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代码中直接获取到这些环境变量的值，本地运行时无法获取到这些环境变量的值
