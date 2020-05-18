@@ -52,17 +52,17 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
 
      PaddleCloud当前只支持命令行方式使用，暂时还不支持web方式
 
-     **linux & mac**
+     - **linux & mac**
      ```shell
      TODO
      ```
 
-     **Windows**
+     - **Windows**
 
      TODO 下载地址待补充
 
 
-     解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，
+     解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，执行如下命令
      ```shell
      paddlecloud.bat
      ```
