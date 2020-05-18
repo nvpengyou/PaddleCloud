@@ -141,9 +141,9 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 向指定邮箱发送一个标识用户身份的AK/SK，作为客户端的注册凭证
 
 - 参数说明
-|参数名|是否必填|说明|示例
-|:---|:---|:---|:---
-|email|Y|你的邮箱地址|zhangsan@163.com
+|参数名|说明|是否必填｜默认值|
+|:---|:---|:---|:---|:---|
+|email|你的邮箱地址，例zhangsan@163.com|Y|-|
 
 - 用法示例
 paddlecloud gen_token --email=<your_email>
@@ -151,24 +151,21 @@ paddlecloud gen_token --email=<your_email>
 ### 创建任务
 - 功能描述
 通过指定一个本地文件夹或者一个bos路径，来发起一个Paddle任务
+注意每天使用公共资源的最大时长为100分钟，同时在运行的最大任务数为2
 
 - 参数说明
-job_name：任务名称，选填，默认tmp_job
-cluster：指定资源池，可选default(默认)/bcc/cce。其中bcc/cce分别对应百度云的两种计算资源
-        default是指优先在cce资源池申请资源，申请不到再切换到bcc资源池申请资源
-public_bcc：是否使用私有计算资源1(是)/0(否)，选填
-        使用公共计算资源时，运行作业时长，实例数等存在限制
-        使用私有计算资源时，需注意确保在配置文件中填写bcc相关配置，并开通bcc权限
-public_bos：是否使用私有存储资源1(是)/0(否)，选填
-        使用公共存储资源时，支持指定本地目录，自动上传到服务器公共空间，但数据私密性较差
-        使用私有存储资源时，默认用户数据在bos上，需注意确保在配置文件中填写bos相关配置，并在命令行指定存储目录(bos_url)，
-job_type：任务类型, gpu(默认) / cpu，注意cluster参数为cce或default时不能指定为cpu
-instance_count：申请计算节点数目，默认1，仅当使用私有资源(public_bcc=0)时允许指定多个
-start_cmd：启动命令，例"sh run.sh"
-wall_time：最长运行时间，默认00:30:00，仅当使用私有资源(public_bcc=0)时生效，格式hh:mm:ss
-bos_url：用户私人的bos目录，仅当使用私有资源(public_bcc=0)时生效, 例<bucket>.bj.bcebos.com/your/dir
-files：本地脚本/数据目录，仅当使用公共资源(public_bcc=0)时生效，例./path/to/data
-
+|参数名|说明|是否必填｜默认值|
+|:---|:---|:---|:---|
+|job_name|任务名称|N|tmp_job|
+|start_cmd|启动命令，例"sh run.sh"|Y|1|
+|cluster|指定资源池，可选default(默认)/bcc/cce。其中bcc/cce分别对应百度云的两种计算资源，default是指优先在cce资源池申请资源，申请不到再切换到bcc资源池申请资源|N|default|bcc|
+|public_bcc|是否使用私有计算资源1(是)/0(否)。使用公共计算资源时，运行作业时长，实例数等存在限制。使用私有计算资源时，需注意确保在配置文件中填写bcc相关配置，并开通bcc权限|N|1|
+|public_bos|是否使用私有存储资源1(是)/0(否)。使用公共存储资源时，支持指定本地目录，自动上传到服务器公共空间，但数据私密性较差。使用私有存储资源时，默认用户数据在bos上，需注意确保在配置文件中填写bos相关配置，并在命令行指定存储目录(bos_url)。|N|1|
+|job_type|任务类型, gpu(默认) / cpu，注意cluster参数为cce或default时不能指定为cpu|N|gpu|
+|instance_count|申请计算节点数目，默认1，仅当使用私有资源(public_bcc=0)时允许指定多个|N|1|
+|wall_time|最长运行时间，仅当使用私有资源(public_bcc=0)时可指定，格式hh:mm:ss|N|00:30:00|
+|bos_url|用户私人的bos目录，例<bucket>.bj.bcebos.com/your/dir|仅当使用私有资源(public_bcc=0)时必须|''|
+|files|本地脚本/数据目录，例./path/to/data|仅当使用公共资源(public_bcc=0)时必须|''|
 
 - 用法示例
 1. 使用全公共资源：paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
@@ -181,31 +178,40 @@ files：本地脚本/数据目录，仅当使用公共资源(public_bcc=0)时生
 指定任务ID，查询任务的状态参数等信息 
 
 - 参数说明
-T
+|参数名|说明|是否必填｜默认值|
+|:---|:---|:---|:---|
+|job_id|任务ID|Y|-|
 
 - 用法示例
-paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
+paddlecloud query_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 
 ### 结束任务
 - 功能描述
-TODO 
+强制杀死一个正在运行的任务
 
 - 参数说明
-TODO
-
+|参数名|说明|是否必填｜默认值|
+|:---|:---|:---|:---|
+|job_id|任务ID|Y|-|
 
 - 用法示例
-TODO
+paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 
 ### 查看结果
 - 功能描述
-TODO 
+查看或下载任务结果
 
 - 参数说明
-TODO
+|参数名|说明|是否必填｜默认值|
+|:---|:---|:---|:---|
+|job_id|任务ID|Y|-|
+|prefix|下载目录前缀，若需要下载全部数据，指定/即可|Y|output/<job_id>|
+|download|是否下载,0(否)/1(是)|N|1|
+|download_dir|指定下载文件夹|N|data|
+
 
 - 用法示例
-TODO
+paddlecloud get_fils --job_id=job-338745e5caa42a1537955e41d6f1ce33
 
 ## 参数说明
 TODO
