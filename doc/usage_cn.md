@@ -211,8 +211,40 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 |JOB_ID|当前作业在PaddleCloud的唯一标识，如job-26a2ad465894160568143eb6100deefa|
 
 ## 配置文件说明
-命令行工具的配置文件client.conf在命令行安装后的目录下
+命令行安装后的目录结构如下
+```
+.
+|-- conf
+|   |-- client.conf
+|-- paddlecloud
+|-- paddlecloud.bat
+```
+配置文件是指/conf/client.conf文件，该文件中配置了token（免费使用）和百度云账号（收费使用）
 
+
+client.conf的内容格式如下：
+```
+[main]
+debug = 0
+email =
+user_id = f658f9627c7b7bb5f74f19c1425bb225
+ak = a0ac89de04387d73abaeda283cdf2776
+sk = 1690c9898597b5fb0e8fc3d9eb5a24a3
+
+[openapi]
+host = paddlecloud.baidu.com
+port = 80
+
+[bcc]
+host = bcc.bj.baidubce.com
+ak =
+sk =
+
+[bos]
+host = bj.bcebos.com
+ak =
+sk =
+```
 
 ## FAQ
 
