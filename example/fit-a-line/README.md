@@ -12,7 +12,7 @@
 │   │   ├── test_data: 测试数据集的目录，可将测试数据放到该目录下，提交任务时会将该目录上传（或者挂载）到集群的计算节点上
 │   ├── run.sh: 训练任务的启动脚本，主要用来调起任务的python脚本，例如：python train.py，该脚本是在计算集群上被调用
 │   ├── train.py: 具体的算法代码，此处的是房价预测的paddle组网代码
-├── submit.sh: 提交任务的脚本，该脚本会调用paddlecloud命令行工具，将训练数据data和训练代码script提交到计算集群中，需要在自己的机器上执行，并且需要先下载并安装paddlecloud命令行工具，该脚本仅支持linux和mac上使用
+├── submit.sh: 提交任务的脚本，该脚本会调用paddlecloud命令行工具，将训练数据data和训练代码train.py、运行脚本run.sh提交到计算集群中，需要在自己的机器上执行，并且需要先下载并安装paddlecloud命令行工具，该脚本仅支持linux和mac上使用
 ```
 
 说明
