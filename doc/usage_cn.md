@@ -227,9 +227,9 @@ client.conf的内容格式如下：
 [main]
 debug = 0
 email =
-user_id = f658f9627c7b7bb5f74f19c1425bb225
-ak = a0ac89de04387d73abaeda283cdf2776
-sk = 1690c9898597b5fb0e8fc3d9eb5a24a3
+user_id = xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ak = xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+sk = xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 [openapi]
 host = paddlecloud.baidu.com
