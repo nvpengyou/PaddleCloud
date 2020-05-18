@@ -117,18 +117,17 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
      
      
      打开安装目录在~/bin/paddlecloud/client.conf文件，将百度云AK/SK信息填入到该文件中
-      
-      
-      ```shell
+           
+     ```shell
       [bcc]
       ak: // 私人的百度云虚拟化计算资源Access Key
       sk: // 私人的百度云虚拟化计算资源Secret Key
  
-      [bos]:
+      [bos]
       ak: // 私人的百度云虚拟化存储资源Access Key
       sk: // 私人的百度云虚拟化存储资源Secret Key
-      ```
-      此处的两套AK/SK可以保持一致
+     ```
+     此处的两套AK/SK可以保持一致
 
 
   [百度云BCC计费说明](https://cloud.baidu.com/doc/BCC/s/Ajy6x35ik)，PaddleCloud自动性价比较好的套餐
