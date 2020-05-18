@@ -189,11 +189,22 @@ paddlecloud gen_token --email=<your_email>
 - 用法示例
 
 
-1. 使用全公共资源：paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
-2. 使用私有计算资源：paddlecloud submit_job --public_bcc=0 --files=<local_dir> --start_cmd="sh run.sh"
-3. 使用私有bos资源：paddlecloud submit_job --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
-4. 使用全私有资源：paddlecloud submit_job --public_bcc=0 --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
-  
+1. 使用公共资源
+```
+paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
+```
+2. 使用私有计算资源
+```
+paddlecloud submit_job --public_bcc=0 --files=<local_dir> --start_cmd="sh run.sh"
+```
+3. 使用私有bos资源
+```
+paddlecloud submit_job --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
+```
+4. 使用全私有资源
+```
+paddlecloud submit_job --public_bcc=0 --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
+```  
 
 ### 查询任务
 - 功能描述
