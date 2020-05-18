@@ -88,7 +88,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
    
   
 ### 一键开始GPU训练
-- 提交训练任务(以plsc任务为例)
+- 提交训练任务(以plsc任务为例，这里将PLSC内置到了命令行工具里，了解详情可参考：[大规模分类](../example/plsc))
 ```
 paddlecloud plsc
 ```
