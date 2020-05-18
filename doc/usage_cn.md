@@ -220,10 +220,10 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 **A：** 命令行工具（paddlecloud命令行）和组网代码（paddle代码）仅支持python3，不支持python2
 
 
-**Q：** 有哪些预置环境变量
+**Q：** 如何在代码中使用PaddleCloud预置的环境变量
 
 
-**A: ** 如何在代码中通过如下方式使用环境变量的值
+**A: ** 在python代码中使用环境变量示例
 ```python
 os.getenv("PADDLE_PORT", "0") == "1"
 ```
