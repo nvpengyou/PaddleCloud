@@ -116,7 +116,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
      - 将百度云AK/SK填入命令行工具的配置文件
      
      
-      打开安装目录在~/bin/paddlecloud/client.conf文件，将百度云AK/SK信息填入到该文件中
+     打开安装目录在~/bin/paddlecloud/client.conf文件，将百度云AK/SK信息填入到该文件中
       
       
       ```shell
@@ -158,6 +158,8 @@ paddlecloud gen_token --email=<your_email>
 注意每天使用公共资源的最大时长为100分钟，同时在运行的最大任务数为2
 
 - 参数说明
+
+
 |参数名|说明|是否必填｜默认值|
 |:---|:---|:---|:---|
 |job_name|任务名称|N|tmp_job|
