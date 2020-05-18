@@ -211,6 +211,7 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 |JOB_ID|当前作业在PaddleCloud的唯一标识，如job-26a2ad465894160568143eb6100deefa|
 
 ## 配置文件说明
+命令行工具的配置文件client.conf在命令行安装后的目录下
 
 
 ## FAQ
