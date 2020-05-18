@@ -53,7 +53,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
      // 注：如下内容仅为示例，以自己收到的邮件中的内容为准
      [main]
      debug = 0
-     userid: xxx
+     userid: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      ak: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      sk: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      ```
