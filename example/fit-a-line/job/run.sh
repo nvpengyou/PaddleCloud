@@ -1,2 +1,2 @@
 #!/bin/bash
-python train.py
+python train.py --use_gpu=True
