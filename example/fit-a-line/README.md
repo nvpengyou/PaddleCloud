@@ -119,43 +119,32 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
   ```
 ### 4. 查看任务详情
 ```json
-$ paddlecloud query_job --job_id=job-1b842079c7045085b23d632a623a46e9
+$ paddlecloud query_job --job_id=job-b010478c356c665ba1c5fc1a1aa9b32f
 
-bos_url: paddlecloud-public.bj.bcebos.com/3871c433a863c4a0df978eff97bc5f1c/job
-create_time: 2020-05-17 20:47:11
-error_msg: 
-finish_time: 0000-00-00 00:00:00
+bos_url: paddlecloud-public.bj.bcebos.com/dd9d92e3dad72633c5053c718203204d/job
+create_time: 2020-05-18 11:24:53
+error_msg:
+finish_time: 2020-05-18 11:26:14
 instance_count: 1
-instance_ids_list: 
-job_id: job-1b842079c7045085b23d632a623a46e9
+instance_ids_list:
+job_id: job-b010478c356c665ba1c5fc1a1aa9b32f
 job_name: tmp_job
-job_status: queue
+job_status: success
 job_type: gpu
 kill_flag: 0
 public_bcc: 1
 public_bos: 1
-queue_reason: 
+queue_reason:
 start_cmd: sh run.sh
-start_time: 0000-00-00 00:00:00
+start_time: 2020-05-18 11:25:12
 wall_time: 00:30:00
 ```
 ### 5. 查看作业目录
 ```json
-$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8
+$ paddlecloud get_files --job_id=job-b010478c356c665ba1c5fc1a1aa9b32f
 
-output/job-0650470e621f3688812ceda2079805f8/	0	2020-05-17T10:15:39Z
-output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log	5453	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/@LR_DECAY_COUNTER@	32	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0_velocity_0	280	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0_velocity_0	280	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_1	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_2	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0_velocity_0	280	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0_velocity_0	280	2020-05-17T10:16:09Z
+output/job-b010478c356c665ba1c5fc1a1aa9b32f/	0	2020-05-18T03:25:02Z
+output/job-b010478c356c665ba1c5fc1a1aa9b32f/log/trainer-0.log	12140	2020-05-18T03:25:46Z
 ....
 ```
 
@@ -163,19 +152,19 @@ output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0_velocity_0
 
 - 下载作业日志
 ```json
-$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8 --prefix=output/job-0650470e621f3688812ceda2079805f8/log --download=1
+$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8 --prefix=output --download=1
 ```
 
 - 查看日志列表
 ```json
-$ ll output/job-0650470e621f3688812ceda2079805f8/log/
+$ ll output/job-0650470e621f3688812ceda2079805f8/log
 
-drwxrwxr-x 2 work work 4096 May 17 19:08 ./
-drwxrwxr-x 3 work work 4096 May 17 19:08 ../
--rw-rw-r-- 1 work work 5453 May 17 19:08 trainer-0.log
+drwxrwxr-x 3 work work 4096 May 18 11:29 ./
+drwxrwxr-x 3 work work 4096 May 18 11:29 ../
+drwxrwxr-x 2 work work 4096 May 18 11:29 log/
 ```
 
 - 查看日志
 ```json
-$ cat output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log
+$ cat output/job-b010478c356c665ba1c5fc1a1aa9b32f/log/trainer-0.log
 ```
