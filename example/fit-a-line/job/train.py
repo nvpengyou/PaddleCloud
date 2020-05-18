@@ -29,12 +29,16 @@ import paddle.fluid as fluid
 
 # 配置训练和测试数据在计算集群上的路径
 
-# 数据在计算集群上的全路径，如果在本地运行该代码，请设置export LOCAL_MOUNT_PATH=local/to/path，并将其指向本地的数据路径
+# 数据在计算集群上的全路径，如果在本地运行该代码，请设置export LOCAL_MOUNT_PATH=local/data/path，并将其指向本地的数据路径
 LOCAL_DATA_PATH = os.getenv("LOCAL_MOUNT_PATH")
 # 训练数据在计算集群上的全路径
 cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data"
 # 测试数据在计算集群上的路径
 cluster_test_dir = LOCAL_DATA_PATH + "/data/test_data"
+
+# 设置在计算集群上的模型输出路径，如果在本地运行该代码，请设置export MODEL_PATH=local/save_model/path，并将其指向本地的数据路径
+# 放到该目录下的文件在作业结束后将被自动上传
+MODEL_PATH = os.getenv("OUTPUT_PATH")
 
 
 def cluster_data_reader(file_dir):
@@ -150,7 +154,7 @@ def main():
     exe = fluid.Executor(place)
 
     # Specify the directory to save the parameters
-    params_dirname = "fit_a_line.inference.model"
+    params_dirname = MODEL_PATH
     num_epochs = args.num_epochs
 
     # main train loop.
