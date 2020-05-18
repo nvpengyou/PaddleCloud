@@ -90,7 +90,8 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 ### 一键开始GPU训练
 - 提交训练任务
 ```
-paddlecloud submit_job --files=data/PLSC --start_cmd="sh run.sh"
+wget https://ppoc-filecenter.cdn.bcebos.com/PLSC.zip && unzip -q PLSC.zip
+paddlecloud submit_job --files=./PLSC --start_cmd="sh run.sh"
 ```
 
 - 查看任务详情
