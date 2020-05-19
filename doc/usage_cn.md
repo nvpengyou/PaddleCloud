@@ -262,7 +262,7 @@ paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 |job_id|任务ID|Y|-|
 |prefix|下载目录前缀，若需要下载全部数据，指定/即可|Y|output/<job_id>|
 |download|是否下载,0(否)/1(是)|N|0|
-|download_dir|指定下载文件夹，要求是一个不存在的目录|N|data|
+|download_dir|指定下载文件夹，要求是一个不存在的目录|N|output|
 
 
 - 用法示例
