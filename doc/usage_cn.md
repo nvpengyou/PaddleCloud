@@ -45,15 +45,10 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
 
   **Windows**
 
-  TODO 下载地址待补充
-
-
-  解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，
-  ```shell
-  paddlecloud.bat
-  ```
-
-
+  
+  暂未开放，敬请期待
+  
+  
 ## 申请&配置token
 
 - **免费使用**
