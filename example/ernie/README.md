@@ -67,18 +67,15 @@ ERNIE.tar.gz
 
      - **linux & mac**
      ```shell
-     TODO
+     暂未开放，敬请期待
      ```
 
      - **Windows**
 
-     TODO 下载地址待补充
+
+     暂未开放，敬请期待
 
 
-     解压缩paddlecloud_stable.tar.gz，打开控制台并cd到当前目录，执行如下命令
-     ```shell
-     paddlecloud.bat
-     ```
 ### 2、申请&配置token
 - **免费使用**
 
