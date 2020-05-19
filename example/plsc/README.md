@@ -1,5 +1,5 @@
 # PLSC飞桨大规模分类库示例
-飞桨大规模分类库[PLSC](https://github.com/PaddlePaddle/PLSC)
+该示例来自飞桨大规模分类库[PLSC](https://github.com/PaddlePaddle/PLSC)
 
 ## 代码结构
 
