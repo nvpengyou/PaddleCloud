@@ -302,7 +302,7 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 |POD_IP|当前节点的IP|
 |PADDLE_TRAINER_ID|当前节点的ID，从0开始编号，取值为0,1,...,(PADDLE_TRAINERS_NUM-1)|
 |PADDLE_TRAINERS_NUM|paddle训练作业的trainer个数|
-|PADDLE_USE_CUDA|当前作业是否使用CUDA，1:使用，是GPU作业，0:不使用，是CPU作业，取决于提交作业时的--job-type参数|
+|PADDLE_USE_CUDA|当前作业是否使用CUDA，1:使用，是GPU作业，0:不使用，是CPU作业，取决于提交作业时的--job_type参数|
 |PADDLE_IS_LOCAL|当前作业是否为分布式作业，1:单机作业，0:分布式作业。PaddleCloud根据作业提交参数设置：单节点默认单机作业，多节点默认分布式作业|
 |DISTRIBUTE_JOB_TYPE|分布式作业类型，取值为PSERVER或NCCL2。PaddleCloud根据作业提交参数设置：BCC多节点CPU作业默认为PSERVER模式，BCC多节点GPU作业默认为NCCL2模式|
 |PADDLE_PSERVERS_IP_PORT_LIST|pserver的ip(或hostname)和port列表，仅在PSERVER模式下生效，如：192.168.0.1:62000,192.168.0.2.62000,...|
