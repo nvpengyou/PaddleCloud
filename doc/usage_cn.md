@@ -180,7 +180,7 @@ paddlecloud gen_token --email=<your_email>
 |job_type|任务类型, gpu(默认) / cpu，注意cluster参数为cce或default时不能指定为cpu|N|gpu|
 |instance_count|申请计算节点数目，默认1，仅当使用私有资源(public_bcc=0)时允许指定多个|N|1|
 |wall_time|最长运行时间，仅当使用私有资源(public_bcc=0)时可指定，格式hh:mm:ss|N|00:30:00|
-|bos_url|用户私人的bos目录，例<bucket>.bj.bcebos.com/your/dir|仅当使用私有资源(public_bcc=0)时必须|''|
+|bos_url|用户私人的bos目录，例{bucket_name}.{region}.bcebos.com/your/dir|仅当使用私有资源(public_bcc=0)时必须|''|
 |files|本地脚本/数据目录，例./path/to/data|仅当使用公共资源(public_bcc=0)时必须|''|
 |watch_mode|是否持续在命令行输出中，持续打印任务状态,0(否)/1(是)|N|0|
   
@@ -190,19 +190,19 @@ paddlecloud gen_token --email=<your_email>
 
 1. 使用公共资源
 ```
-paddlecloud submit_job --files=<local_dir> --start_cmd="sh run.sh"
+paddlecloud submit_job --files={local_dir} --start_cmd="sh run.sh"
 ```
 2. 使用私有计算资源
 ```
-paddlecloud submit_job --public_bcc=0 --files=<local_dir> --start_cmd="sh run.sh"
+paddlecloud submit_job --public_bcc=0 --files={local_dir} --start_cmd="sh run.sh"
 ```
 3. 使用私有bos资源
 ```
-paddlecloud submit_job --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
+paddlecloud submit_job --public_bos=0 --bos_url={bucket}.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
 ```
 4. 使用全私有资源
 ```
-paddlecloud submit_job --public_bcc=0 --public_bos=0 --bos_url=<bucket>.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
+paddlecloud submit_job --public_bcc=0 --public_bos=0 --bos_url={bucket}.bj.bcebos.com/your/dir --start_cmd="sh run.sh"
 ```  
 
 ### 查询任务
