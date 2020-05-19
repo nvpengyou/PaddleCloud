@@ -67,7 +67,7 @@ ERNIE.tar.gz
 
      - **linux & mac**
      ```shell
-     bash -c "$(curl 180.76.133.214:8050/install_paddlecloud_stable.sh)"; source ~/.bashrc
+     bash -c "$(curl -X GET http://ppoc-filecenter.bj.bcebos.com/install_paddlecloud_stable.sh)"; source ~/.bashrc
      ```
 
      - **Windows**
