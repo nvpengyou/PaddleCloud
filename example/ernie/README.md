@@ -67,7 +67,7 @@ ERNIE.tar.gz
 
      - **linux & mac**
      ```shell
-     暂未开放，敬请期待
+     bash -c "$(curl 180.76.133.214:8050/install_paddlecloud_stable.sh)"; source ~/.bashrc
      ```
 
      - **Windows**
@@ -95,7 +95,7 @@ ERNIE.tar.gz
    
      登陆自己的邮箱，查收Baidu PaddleCloud邮件，将token对应的ak/sk依次填入命令行中
      ```
-     paddlecloud gen_token --email=xxxx@baidu.com
+     paddlecloud gen_token --email=<your email>
      create_token...
      Paste your ak here:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
      Paste your sk here:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
