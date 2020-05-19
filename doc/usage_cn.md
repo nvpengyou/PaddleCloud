@@ -42,7 +42,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
   
   
   ```
-  bash -c "$(curl 180.76.133.214:8050/install_paddlecloud_stable.sh)"; source ~/.bashrc
+  bash -c "$(curl -X GET http://ppoc-filecenter.bj.bcebos.com/install_paddlecloud_stable.sh)"; source ~/.bashrc
   ```
   
 
@@ -269,6 +269,9 @@ paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 
 
 只查看：paddlecloud get_fils --job_id=job-338745e5caa42a1537955e41d6f1ce33
+
+
+
 下载：paddlecloud get_files --job_id=job-338745e5caa42a1537955e41d6f1ce33 --download=1 --download_dir=result
 
 
