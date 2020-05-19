@@ -104,7 +104,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
    
   
 ### 一键开始GPU训练
-- 提交训练任务（以plsc任务为例，这里将PLSC内置到了命令行工具里，了解详情可参考：[大规模分类](../example/plsc)）
+- 提交训练任务（以plsc任务为例，这里将PLSC内置到了命令行工具里，了解详情可参考：[大规模分类示例](../example/plsc)）
 ```
 paddlecloud plsc
 ```
@@ -121,5 +121,5 @@ paddlecloud get_files --job_id=job-b4b917843790cc7964ca49d776457004 --download=1
 
 ### 按示例使用
 - [房价预测示例](../example/fit-a-line)
-- [大规模分类](../example/plsc)
-- [语义理解预训练](../example/ernie)
+- [大规模分类示例](../example/plsc)
+- [语义理解预训练示例](../example/ernie)
