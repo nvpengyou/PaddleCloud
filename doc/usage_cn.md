@@ -180,6 +180,7 @@ paddlecloud gen_token --email=<your_email>
 |wall_time|最长运行时间，仅当使用私有资源(public_bcc=0)时可指定，格式hh:mm:ss|N|00:30:00|
 |bos_url|用户私人的bos目录，例<bucket>.bj.bcebos.com/your/dir|仅当使用私有资源(public_bcc=0)时必须|''|
 |files|本地脚本/数据目录，例./path/to/data|仅当使用公共资源(public_bcc=0)时必须|''|
+|watch_mode|是否持续在命令行输出中，持续打印任务状态,0(否)/1(是)|N|0|
   
 
 - 用法示例
@@ -258,14 +259,33 @@ paddlecloud kill_job --job_id=job-338745e5caa42a1537955e41d6f1ce33
 |:---|:---|:---|:---|
 |job_id|任务ID|Y|-|
 |prefix|下载目录前缀，若需要下载全部数据，指定/即可|Y|output/<job_id>|
-|download|是否下载,0(否)/1(是)|N|1|
-|download_dir|指定下载文件夹|N|data|
+|download|是否下载,0(否)/1(是)|N|0|
+|download_dir|指定下载文件夹，要求是一个不存在的目录|N|data|
 
 
 - 用法示例
 
 
-paddlecloud get_fils --job_id=job-338745e5caa42a1537955e41d6f1ce33
+只查看：paddlecloud get_fils --job_id=job-338745e5caa42a1537955e41d6f1ce33
+下载：paddlecloud get_files --job_id=job-338745e5caa42a1537955e41d6f1ce33 --download=1 --download_dir=result
+
+
+## 任务状态说明
+每个任务在生命周期中的不同阶段，拥有不同的状态，可以通过query_job命令返回的job_status查看。下表是状态的简要说明
+
+
+|状态类型|说明|
+|:---|:---|
+|submit|提交中|
+|schedule|调度中|
+|queue|资源不足，排队中|
+|running|运行中|
+|failed|失败|
+|success|成功|
+|timeout|运行超时|
+|schedule timeout|超时未调度|
+|killing|终止中|
+|killed|已终止|
 
 
 ## 环境变量说明

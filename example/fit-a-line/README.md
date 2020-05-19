@@ -144,7 +144,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
   ```
 ### 4. 查看任务详情
 ```json
-$ paddlecloud query_job --job_id=job-b010478c356c665ba1c5fc1a1aa9b32f
+$ paddlecloud query_job --job_id=job-d22c1fffb768d9b0748def85b158f303
 
 bos_url: paddlecloud-public.bj.bcebos.com/dd9d92e3dad72633c5053c718203204d/job
 create_time: 2020-05-18 11:24:53
@@ -152,7 +152,7 @@ error_msg:
 finish_time: 2020-05-18 11:26:14
 instance_count: 1
 instance_ids_list:
-job_id: job-b010478c356c665ba1c5fc1a1aa9b32f
+job_id: job-d22c1fffb768d9b0748def85b158f303
 job_name: tmp_job
 job_status: success
 job_type: gpu
@@ -166,10 +166,13 @@ wall_time: 00:30:00
 ```
 ### 5. 查看作业目录
 ```json
-$ paddlecloud get_files --job_id=job-b010478c356c665ba1c5fc1a1aa9b32f
+$ paddlecloud get_files --job_id=job-d22c1fffb768d9b0748def85b158f303
 
-output/job-b010478c356c665ba1c5fc1a1aa9b32f/	0	2020-05-18T03:25:02Z
-output/job-b010478c356c665ba1c5fc1a1aa9b32f/log/trainer-0.log	12140	2020-05-18T03:25:46Z
+2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/       0       2020-05-19T06:39:03Z
+2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/log/trainer-0.log      9649    2020-05-19T06:39:53Z
+2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/rank-0/__model__       5322    2020-05-19T06:39:47Z
+2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/rank-0/fc_0.b_0        28      2020-05-19T06:39:47Z
+2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/rank-0/fc_0.w_0        78      2020-05-19T06:39:47Z
 ....
 ```
 
@@ -177,19 +180,19 @@ output/job-b010478c356c665ba1c5fc1a1aa9b32f/log/trainer-0.log	12140	2020-05-18T0
 
 - 下载作业日志
 ```json
-$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8 --prefix=output --download=1
+$ paddlecloud get_files --job_id=job-d22c1fffb768d9b0748def85b158f303 --download=1
 ```
 
 - 查看日志列表
 ```json
-$ ll output/job-0650470e621f3688812ceda2079805f8/log
+$ ll output/2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/log
 
 drwxrwxr-x 3 work work 4096 May 18 11:29 ./
 drwxrwxr-x 3 work work 4096 May 18 11:29 ../
-drwxrwxr-x 2 work work 4096 May 18 11:29 log/
+drwxrwxr-x 2 work work 4096 May 18 11:29 trainer-0.log
 ```
 
 - 查看日志
 ```json
-$ cat output/job-b010478c356c665ba1c5fc1a1aa9b32f/log/trainer-0.log
+$ cat output/2285758331454547565081a3eb37e538/job/output/job-d22c1fffb768d9b0748def85b158f303/log/trainer-0.log
 ```

@@ -189,12 +189,12 @@ $ paddlecloud get_files --job_id=job-24ee302e8b411a337b9a354ab002c688
 
 - 下载作业日志
 ```json
-$ paddlecloud get_files --job_id=job-24ee302e8b411a337b9a354ab002c688 --prefix=output --download=1
+$ paddlecloud get_files --job_id=job-24ee302e8b411a337b9a354ab002c688 --download=1
 ```
 
 - 查看日志列表
 ```json
-$ ll output/job-24ee302e8b411a337b9a354ab002c688/log
+$ ll output/j7cf50eac1e7b3f3e9548290fcaab7e66/ernie/output/job-24ee302e8b411a337b9a354ab002c688/log
 
 drwxrwxr-x 3 work work 4096 May 18 11:29 ./
 drwxrwxr-x 3 work work 4096 May 18 11:29 ../

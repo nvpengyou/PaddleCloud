@@ -9,7 +9,7 @@
 ├── job: 示例任务父目录，用paddlecloud命令行提交任务时配置--file=./job,可将该目录提交到计算集群上
 │   ├── data: data目录用来存放训练和测试数据集的本地目录，提交训练任务后，该目录会被整体上传到计算集群中
 │   │   ├── train_data: 训练数据集的目录，可将训练数据放到该目录下，提交任务时会将该目录上传（或者挂载）到集群的计算节点上
-│   │   ├── label.txt: 
+│   │   ├── label.txt: 训练数据集的label
 │   ├── run.sh: 训练任务的启动脚本，主要用来调起任务的python脚本，例如：python train.py，该脚本是在计算集群上被调用
 │   ├── train.py: 具体的算法代码，此处的是plsc训练代码
 │   ├── zip_reader.py: 读取zip的reader py文件
@@ -164,19 +164,16 @@ wall_time: 00:30:00
 ```json
 $ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8
 
-output/job-0650470e621f3688812ceda2079805f8/	0	2020-05-17T10:15:39Z
-output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log	5453	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/@LR_DECAY_COUNTER@	32	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0_velocity_0	280	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0_velocity_0	280	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_1	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_2	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0_velocity_0	280	2020-05-17T10:16:09Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0	280	2020-05-17T10:16:01Z
-output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0_velocity_0	280	2020-05-17T10:16:09Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/	0	2020-05-17T10:15:39Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log	5453	2020-05-17T10:16:09Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/@LR_DECAY_COUNTER@	32	2020-05-17T10:16:09Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0	280	2020-05-17T10:16:01Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.b_0_velocity_0	280	2020-05-17T10:16:09Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0	280	2020-05-17T10:16:01Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_0_velocity_0	280	2020-05-17T10:16:09Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_1	280	2020-05-17T10:16:01Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_0.w_2	280	2020-05-17T10:16:01Z
+be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.b_0	280	2020-05-17T10:16:01Z
 ....
 ```
 
@@ -184,12 +181,12 @@ output/job-0650470e621f3688812ceda2079805f8/rank-0/0/batch_norm_1.w_0_velocity_0
 
 - 下载作业日志
 ```json
-$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8 --prefix=output/job-0650470e621f3688812ceda2079805f8/log --download=1
+$ paddlecloud get_files --job_id=job-0650470e621f3688812ceda2079805f8 --download=1
 ```
 
 - 查看日志列表
 ```json
-$ ll output/job-0650470e621f3688812ceda2079805f8/log/
+$ ll output/be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/log/
 
 drwxrwxr-x 2 work work 4096 May 17 19:08 ./
 drwxrwxr-x 3 work work 4096 May 17 19:08 ../
@@ -198,5 +195,5 @@ drwxrwxr-x 3 work work 4096 May 17 19:08 ../
 
 - 查看日志
 ```json
-$ cat output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log
+$ cat output/be498d935e6c14c166699dd941dc0c0b/plsc/output/job-0650470e621f3688812ceda2079805f8/log/trainer-0.log
 ```
