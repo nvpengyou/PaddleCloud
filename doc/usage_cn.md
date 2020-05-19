@@ -300,19 +300,20 @@ PaddleCloud内置了一些环境变量，在任务运行时可以在自己的代
 |环境变量|说明|
 |:---|:---|
 |POD_IP|当前节点的IP|
-|PADDLE_TRAINER_ID|当前节点的ID，从0开始编号，取值为0,1,...,PADDLE_TRAINERS_NUM-1|
+|PADDLE_TRAINER_ID|当前节点的ID，从0开始编号，取值为0,1,...,(PADDLE_TRAINERS_NUM-1)|
 |PADDLE_TRAINERS_NUM|paddle训练作业的trainer个数|
-|PADDLE_USE_CUDA|当前作业是否使用CUDA，1:使用，是GPU作业，0:不使用，是CPU作业|
-|PADDLE_IS_LOCAL|当前作业是否为分布式作业，1:单机作业，0:分布式作业|
-|DISTRIBUTE_JOB_TYPE|分布式作业类型，取值为PSERVER或NCCL2|
-|PADDLE_PSERVERS_IP_PORT_LIST|pserver的ip和port列表，如：192.168.0.1:62000,192.168.0.2.62000,...|
-|PADDLE_TRAINER_ENDPOINTS|所有trainer的ip和port列表，如：192.168.0.1:62000,192.168.0.2.62000,...|
-|PADDLE_CURRENT_ENDPOINT|当前trainer的ip和port，如：192.168.0.1:62000|
+|PADDLE_USE_CUDA|当前作业是否使用CUDA，1:使用，是GPU作业，0:不使用，是CPU作业，取决于提交作业时的--job-type参数|
+|PADDLE_IS_LOCAL|当前作业是否为分布式作业，1:单机作业，0:分布式作业。PaddleCloud根据作业提交参数设置：单节点默认单机作业，多节点默认分布式作业|
+|DISTRIBUTE_JOB_TYPE|分布式作业类型，取值为PSERVER或NCCL2。PaddleCloud根据作业提交参数设置：BCC多节点CPU作业默认为PSERVER模式，BCC多节点GPU作业默认为NCCL2模式|
+|PADDLE_PSERVERS_IP_PORT_LIST|pserver的ip(或hostname)和port列表，仅在PSERVER模式下生效，如：192.168.0.1:62000,192.168.0.2.62000,...|
+|PADDLE_TRAINER_ENDPOINTS|所有trainer的ip(或hostname)和port列表，仅在NCCL2模式下生效，如：192.168.0.1:62000,192.168.0.2.62000,...|
+|PADDLE_CURRENT_ENDPOINT|当前trainer的ip(或hostname)和port，仅在NCCL2模式下生效，如：192.168.0.1:62000|
 |TRAINING_ROLE|当前节点的角色，取值为PSERVER或TRAINER|
 |OUTPUT_PATH|本地的输出目录路径，用户可将模型保存到该路径下，PaddleCloud会自动上传到BOS|
-|LOCAL_LOG_PATH|本地的日志路径，PaddleCloud会采集训练过程的stdout和stderr并自动上传BOS，如果用户有额外需要保存的日志，可以写到该目录下|
+|LOCAL_LOG_PATH|本地的日志目录路径，PaddleCloud会采集训练过程的stdout和stderr并自动上传BOS，如果用户有额外需要保存的日志，可以写到该目录下|
 |LOCAL_MOUNT_PATH|BOS目录在本地的挂载路径|
 |JOB_ID|当前作业在PaddleCloud的唯一标识，如job-26a2ad465894160568143eb6100deefa|
+
 
 ## 配置文件说明
 命令行安装后的目录结构如下
