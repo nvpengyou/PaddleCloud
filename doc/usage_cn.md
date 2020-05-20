@@ -63,7 +63,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
    操作步骤：
  
  
-   1）填入企业或组织邮箱，申请token，等待邮件通知
+   1）填入企业或组织邮箱，申请token，等待邮件通知（注意：有些邮件供应商可能会屏蔽该邮件或将邮件判别为垃圾邮件）
    ```shell
    paddlecloud gen_token --email=<your email>
    例如：paddlecloud gen_token --email=your_name@163.com
