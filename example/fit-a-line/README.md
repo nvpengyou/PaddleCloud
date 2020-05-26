@@ -129,7 +129,7 @@ cluster_train_dir = LOCAL_DATA_PATH + "/data/train_data" # 计算节点上训练
       ak: // 私人的百度云虚拟化存储资源Access Key
       sk: // 私人的百度云虚拟化存储资源Secret Key
       ```
-      此处的两套AK/SK可以保持一致
+      注意：此处的两套AK/SK可以保持一致, 使用付费资源时，需要在命令行中加入--public_bcc=1参数
 
 ### 3、提交任务
 
