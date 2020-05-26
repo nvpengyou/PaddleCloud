@@ -124,7 +124,7 @@ PaddleCloud能够帮助您一键发起深度学习任务，为您提供免费底
       ak: // 私人的百度云虚拟化存储资源Access Key
       sk: // 私人的百度云虚拟化存储资源Secret Key
      ```
-     此处的两套AK/SK可以保持一致
+     注意：此处的两套AK/SK可以保持一致, 使用付费资源时，需要在命令行中加入--public_bcc=1参数
 
 
   [百度云BCC计费说明](https://cloud.baidu.com/doc/BCC/s/Ajy6x35ik)，PaddleCloud自动性价比较好的套餐
